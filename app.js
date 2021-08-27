@@ -13,5 +13,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/Library',{ useUnifiedTopology: true,
         .then( () => console.log('mongodb connection up'))
         .catch( error => console.log(`unable to connect to mongodb: ${error.message}`));
 
-app.listen(3001, () => console.log('server started'));
+app.listen(process.env.PORT||3001, () => console.log('server started'));
 
